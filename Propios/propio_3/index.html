@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Propio 👍</title>
+    <style>
+        .color-dark{
+            background-color: #77777d;
+        }
+    </style>
 </head>
-<body>
+<body class="color-dark">
     <section>
         <h1 id="title"></h1>
     </section>
@@ -27,11 +32,38 @@
             title.innerHTML = " ---------- Bienvenido ----------";
 
             estructura.innerHTML = `
-                graph TD
-                A[Cliente 📁] --> B[Load Balancer 📗]
-                B --> C[Server1 📘]
-                B --> D[Server2 📕]
+                graph TD`
+            +
+            `
+                A(📁src 📗) --> |inicia| B[index.js 📟]
+                B --> C(📁Routes )
+                C --> ROU_INDEX[index.js 🌌]
+                ROU_INDEX --> ROU_1[AuthRoute ✅]
+                ROU_INDEX --> ROU_2[UserRoute ✅]
+                ROU_INDEX --> ROU_3[ProductRoute ✅]
+                ROU_INDEX --> ROU_4[StockRoute ✅]
+
+                ROU_1 --> CON_1[AuthController ⬛]
+                ROU_2 --> CON_2[UserController ⬛]
+                ROU_3 --> CON_3[ProductController ⬛]
+                ROU_4 --> CON_4[StockController ⬛]
+
+                CON_1 --> SER_1[AuthService 💳]
+                CON_2 --> SER_2[UserService 💳]
+                CON_3 --> SER_3[ProductService 💳]
+                CON_4 --> SER_4[StockService 💳]
+
+                SER_1 --> REP_1[AuthRepository 🏮]
+                SER_2 --> REP_2[UserRepository 🏮]
+                SER_3 --> REP_3[ProductRepository 🏮]
+                SER_4 --> REP_4[StockRepository 🏮]
             `;
+            // estructura.innerHTML = `
+            //     graph TD
+            //     A[Cliente 📁] --> B[Load Balancer 📗]
+            //     B --> C[Server1 📘]
+            //     B --> D[Server2 📕]
+            // `;
         }
 
         alerta();
