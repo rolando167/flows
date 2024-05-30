@@ -10,11 +10,7 @@
         <h1 id="title"></h1>
     </section>
     <section>
-        <pre class="mermaid">
-            graph TD
-            A[Client 📁] --> B[Load Balancer 📗]
-            B --> C[Server1 📘]
-            B --> D[Server2 📕]
+        <pre class="mermaid" id="estructura">
         </pre>
     </section>
 
@@ -26,8 +22,16 @@
     <script type="">
         function alerta(){
             const title = document.getElementById("title");
+            const estructura = document.getElementById("estructura");
 
             title.innerHTML = " ---------- Bienvenido ----------";
+
+            estructura.innerHTML = `
+                graph TD
+                A[Cliente 📁] --> B[Load Balancer 📗]
+                B --> C[Server1 📘]
+                B --> D[Server2 📕]
+            `;
         }
 
         alerta();
