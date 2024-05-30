@@ -1,0 +1,44 @@
+<html>
+  <body>
+    Here is one mermaid diagram: 
+    <hr>
+    <br>Repository   🏮
+    <br>Libraries  📦
+    <br>Controller 🔧 ⬛
+    <br>Services 💳 
+    <br>Helpers 🛠 
+    <br>Middleware 📗 🚧 🔰
+    <br>Models 📙 🎴
+    <br>Interfaces 📘 🌌 🎫
+    <br>DTO   💠🌐
+    <br> 
+    <br>
+    <hr>
+    <pre class="mermaid">
+            graph TD 
+            A[Client 📁] --> B[Load Balancer 📗] 
+            B --> C[Server1 📘] 
+            B --> D[Server2 📕]
+    </pre>
+
+    And here is another:
+    <pre class="mermaid">
+            graph TD 
+            A[Client 💳] -->|tcp_123| B
+            B(Load Balancer) 
+            B -->|tcp_456| C[Server1 📰] 
+            B -->|tcp_456| D[Server2 📋]
+    </pre>
+
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true });
+    </script>
+  </body>
+  <!--
+    https://stackoverflow.com/questions/70168254/project-structure-to-graphical-layout-vscode
+    https://mermaid.js.org/intro/getting-started.html#_4-calling-the-mermaid-javascript-api
+    https://mermaid.live/edit#pako:eNpVkEFvgzAMhf9K5NMm0arQFmgOk1a69dJpk9bToAcLAolaEhSCOgb89wUqTatP9nufnyx3kKqMAYX8oq4pR23IcZdIYus5jrgWtSmxPpHZ7KnfM0NKJVnbk-3DXpGaq6oSsni88dsRIlF3GDFGDBfyPNysaNp_l6wnu_iAlVHV6b9zvKqevMTig9v4e4drZrde4xxpjrMUNYlQTwg4UDJdosjs-d2oJGA4K1kC1LYZ6nMCiRwsh41Rn61MgRrdMAe0agoONvBS26mpMjRsJ7DQWP6pFcovpe5moB18A_VWwdwNXd9bL33fcxeblQMt0HC-CEJ_HbqL5WblhYE7OPAzJbgOsEwYpd9uv55ePvwC2Zt1cQ
+
+   -->
+</html>
